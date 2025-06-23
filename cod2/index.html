@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>استلامات الأطار الأول</title>
+    <meta name="description" content="نظام إدارة الاستلامات - الأطار الأول" />
+    <meta name="keywords" content="استلامات, إدارة, الأطار الأول, نظام" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="استلامات الأطار الأول" />
+    <meta property="og:description" content="نظام إدارة الاستلامات - الأطار الأول" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- Arabic Font Support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        direction: rtl;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+      
+      /* تحسينات للأجهزة المحمولة */
+      @media (max-width: 640px) {
+        body {
+          font-size: 14px;
+        }
+        
+        .container {
+          padding: 1rem;
+        }
+        
+        .table-responsive {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        
+        .btn-mobile {
+          padding: 0.75rem 1rem;
+          font-size: 0.875rem;
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+        
+        .card-mobile {
+          margin: 0.5rem;
+          padding: 1rem;
+          border-radius: 0.75rem;
+        }
+        
+        .text-mobile {
+          font-size: 0.875rem;
+        }
+        
+        .heading-mobile {
+          font-size: 1.25rem;
+        }
+      }
+      
+      /* تحسينات للتابلت */
+      @media (min-width: 641px) and (max-width: 1024px) {
+        .grid-tablet {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .text-tablet {
+          font-size: 1rem;
+        }
+        
+        .heading-tablet {
+          font-size: 1.5rem;
+        }
+      }
+      
+      /* تحسينات للشاشات الكبيرة */
+      @media (min-width: 1025px) {
+        .grid-desktop {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .text-desktop {
+          font-size: 1rem;
+        }
+        
+        .heading-desktop {
+          font-size: 1.875rem;
+        }
+      }
+      
+      /* تحسينات عامة للاستجابة */
+      .responsive-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+      }
+      
+      @media (min-width: 640px) {
+        .responsive-container {
+          padding: 0 1.5rem;
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .responsive-container {
+          padding: 0 2rem;
+        }
+      }
+      
+      /* تحسينات للنماذج */
+      .form-responsive input,
+      .form-responsive select,
+      .form-responsive textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #d1d5db;
+      }
+      
+      @media (max-width: 640px) {
+        .form-responsive input,
+        .form-responsive select,
+        .form-responsive textarea {
+          padding: 0.625rem 0.875rem;
+          font-size: 0.875rem;
+        }
+      }
+      
+      /* تحسينات للأزرار */
+      .btn-responsive {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.2s;
+      }
+      
+      @media (max-width: 640px) {
+        .btn-responsive {
+          padding: 0.625rem 1rem;
+          font-size: 0.875rem;
+          width: 100%;
+        }
+      }
+      
+      /* تحسينات للجداول */
+      .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      .table-responsive table {
+        min-width: 600px;
+      }
+      
+      @media (max-width: 1024px) {
+        .table-responsive table {
+          font-size: 0.875rem;
+        }
+      }
+      
+      /* تحسينات للصور */
+      .image-responsive {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+      }
+      
+      /* تحسينات للنصوص */
+      .text-responsive {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      
+      /* تحسينات للمساحات */
+      .spacing-responsive {
+        margin: 1rem 0;
+      }
+      
+      @media (max-width: 640px) {
+        .spacing-responsive {
+          margin: 0.75rem 0;
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .spacing-responsive {
+          margin: 1.5rem 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
